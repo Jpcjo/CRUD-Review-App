@@ -18,6 +18,10 @@ const Tabs = () => {
     dispatch(activeTabNum(tabNumber));
   };
 
+  const switchToTabThree = () => {
+    handleTabClick(3);
+  };
+
   const getTabContentStyle = () => {
     return {
       transform: `translateX(-${100 * (activeTab - 1)}%)`,
@@ -49,8 +53,10 @@ const Tabs = () => {
         </div>
         <div className="mt-4 flex flex-row overflow-hidden relative">
           <div style={getTabContentStyle()}>
-            <div className="bg-slate-100 p-4 min-w-full">
-              {activeTab === 1 && <TabOneContent />}
+            <div className="  p-4 min-w-full">
+              {activeTab === 1 && (
+                <TabOneContent switchToTabThree={switchToTabThree} />
+              )}
             </div>
             <div className=" py-4 min-w-full">
               {activeTab === 2 && <TabTwoContent />}
