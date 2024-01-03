@@ -1,0 +1,245 @@
+const reviews = [
+  {
+    id: 1,
+    rating: 5,
+    userName: "kp",
+    date: "08/2023",
+    comment:
+      "If you're a salt and vinegar chip person then 100% order the tomato sandwich! I was a little unsure of what to get but apparently the tomato is the top seller. Great soft bread and perfect bread/sauce/filling ratios. Also ordered a cardamom bun to take away and it was super soft and fresh.",
+    service: "Dine in",
+    mealType: "Lunch",
+    pricePerPerson: "$1-20",
+  },
+  {
+    id: 2,
+    rating: 5,
+    userName: "Tahnya Thai",
+    date: "11/2023",
+    comment:
+      "I generally don’t write reviews but this deserves a thumbs up.  Stumbled upon this small cafe across from West End State School this morning.  Bought a flat white and some buns. They had cardamon and cinnamon buns and were the best I’ve had.  Buns were super soft, not too sweet with just the right amount of cinnamon / cardamon.  If you’re looking for that craving, this is the place!  Have not tried the focaccia but will definitely give it a try.",
+    service: "Take out",
+    mealType: "Other",
+    pricePerPerson: "$1-20",
+    options: "Dietary restrictions, Vegetarian options",
+  },
+  {
+    id: 3,
+    rating: 4,
+    userName: "Tiffany Payne",
+    date: "12/2023",
+    comment:
+      "Incredible vegan focaccia sandwiches, great coffee and delicious new hot chips! The Twin is where it’s at",
+    service: "Dine in",
+    mealType: "Lunch",
+    pricePerPerson: "$1-20",
+    options: "Kid-friendliness",
+  },
+  {
+    id: 4,
+    rating: 5,
+    userName: "Thomas Kreuzer",
+    date: "09/2023",
+    comment:
+      "I have no idea how one can make such great focaccia. But these guys absolutely nail it. Never have we had such a soft and fluffy focaccia with such great toppings. The desserts are also a banger. A must visit when you are in Brisbane and West End.",
+    service: "Dine in",
+    mealType: "Brunch",
+    pricePerPerson: "$20-40",
+    options: "Kid-friendliness",
+  },
+  {
+    id: 5,
+    rating: 5,
+    userName: "Nuo Chen",
+    date: "02/2023",
+    comment:
+      "The mushroom pate and the eggplant were both super DELICIOUS. The bread was SO GOOD too, great air bubbles and beautiful texture. They were surprisingly filling too, just one sandwich made me full (I wanted to try a different one😤)Will 200% come again and recommend to every friend of mine!!",
+  },
+  {
+    id: 6,
+    rating: 4,
+    userName: "Christopher T",
+    date: "12/2022",
+    comment:
+      "My take on this may be a bit bias cause I love facacia but I just had one of the greatest sandwiches I've eaten in brisbane. The portion size was just right and the flavours were crazy good. Honoured to be the first one to leave a google review.",
+    service: "Dine in",
+    mealType: "Breakfast",
+    pricePerPerson: "$20-40",
+    options: "From what I can see the whole menu is vegetarian.",
+  },
+  {
+    id: 7,
+    rating: 5,
+    userName: "Sinead Prince",
+    date: "06/2023",
+    comment:
+      "The most delicious focaccia I've had in my life. I love how they rotate the sandwiches around so there is always something new to try. The garden and indoor seating area is super cute and the staff are really lovely and welcoming. It's a must eat in West End and Brisbane.",
+    service: "Delivery",
+    mealType: "Breakfast",
+    pricePerPerson: "$1-20",
+    options: "Parking, Vegetarian options",
+  },
+  {
+    id: 8,
+    rating: 5,
+    userName: "Jimmy Pyne",
+    date: "06/2023",
+    comment:
+      "It’s great to see there’s new life making the most of this awesome west end space. While the kitchen occupies a large percentage of the space inside, it is open and conducive to good interaction between patrons and staff. ‘Unfinished’ wouldn’t be correct but I think the personality of the space is still growing. There is also soft natural light from the large street facing window, and outside boasts a functional little courtyard. The menu is all about the sandwiches, which are made to order and taste that way. Here: kimchi, lemon tahini and greens on focaccia. Kimchi and tahini, I wouldn’t have thunk it, but this was throughly enjoyed, and certainly helped by the warm focaccia. You can tell they are passionate about the food, and the milk on the side of the smooth iced long black makes me think the same for their coffee.Overall, thoughtful food, and attentive and personal service. I hope to sus out the other sandwich flavours on return visits.",
+    service: "Dine in",
+    mealType: "Brunch",
+    pricePerPerson: "$20-40",
+    options: "Vegetarian options",
+  },
+  {
+    id: 9,
+    rating: 5,
+    userName: "Caitlin Finn",
+    date: "06/2023",
+    comment:
+      "Been meaning to check this place out. Focaccia is 10/10 - and the whole sandwich as well, was delicious. Creative and tasty ingredients. Had the tomato one - delicious. Coffee on point and lovely staff. Thanks. Will definitely be a regular now.",
+    service: "Dine in",
+    mealType: "Lunch",
+    pricePerPerson: "$20-40",
+  },
+  {
+    id: 10,
+    rating: 4,
+    userName: "Declan Goodsell",
+    date: "05/2023",
+    comment:
+      "The fresh focaccia that they make here is truly delicious. I’ve tried every sandwich currently on the menu and they’re all fantastic, they are generously loaded up with fresh herbs and all that good stuff. My personal favourite is the white bean sandwich. The coffee is good too. Have been recommending this place to just about everybody I know.",
+  },
+  {
+    id: 11,
+    rating: 5,
+    userName: "Vikas Gupta",
+    date: "09/2023",
+    comment:
+      "Food was  great, customer service was great and the seating area was so nice to be In",
+    service: "Dine in",
+    mealType: "Brunch",
+    pricePerPerson: "$20-40",
+    options: "Vegetarian options, Parking, Dietary restrictions ",
+  },
+  {
+    id: 12,
+    rating: 5,
+    userName: "Tenielle Dunkley",
+    date: "09/2023",
+    comment:
+      "Honestly, the best coffee I’ve had in Brisbane! I’ve found myself going here instead of my other regular cafes because the coffee is just tooooo good. I’ve yet to try the food but it looks sensational! The staff are also very welcoming 😌",
+    service: "Delivery",
+    mealType: "Lunch",
+    pricePerPerson: "$20-40",
+    options: "Vegetarian options, Dietary restrictions ",
+  },
+  {
+    id: 13,
+    rating: 5,
+    userName: "Marina",
+    date: "02/2023",
+    comment:
+      "Hands up best focaccia sandwiches I’ve had in my life. Every time I go they manage to surprise me and I now call it the orgasm sandwich place.Their sandwiches are super thought through, balanced, the ingredients complements each other in a very smart and delectable way and the textures are always on point.They change their menu pretty often and it’s always new recipes coming from different parts of the globe. The care they put in their work really shows.To top it all, the service is great and the two owners are very friendly.Absolutely love that place !",
+  },
+  {
+    id: 14,
+    rating: 5,
+    userName: "Ruby Douglas",
+    date: "08/2023",
+    comment:
+      "My mum and I come here every Friday and it never disappoints. Best scandi buns, coffee, and focaccia. Love it",
+    service: "Dine in",
+    mealType: "Breakfast",
+    pricePerPerson: "$1-20",
+    options: "Vegetarian options, Dietary restrictions",
+  },
+  {
+    id: 15,
+    rating: 5,
+    userName: "Jaime Swift",
+    date: "08/2023",
+    comment:
+      "Seriously excellent coffee. So nice to see some proper scandi buns too. Also the staff are just super lovely and make the atmosphere so welcoming.",
+    pricePerPerson: "$20-40",
+    options: "Vegetarian options",
+  },
+  {
+    id: 16,
+    rating: 4,
+    userName: "Courtney Gould",
+    date: "09/2023",
+    comment:
+      "I would pay $66.00 for these Sandwhiches if I had to, incredibly delicious so much so that no other sandwich could at all compare. 100/10 from me!",
+    service: "Dine in",
+    mealType: "Lunch",
+    pricePerPerson: "$20-40",
+    options: "Dietary restrictions",
+  },
+  {
+    id: 17,
+    rating: 5,
+    userName: "Shari Bartley",
+    date: "03/2023",
+    comment:
+      "Only regret is not trying it sooner. My eggplant and pesto focaccia was amazing! I’ve tried some good pestos in my life but this one was the best! The kale and herbs also made it. Definitely my new local place for lunch!",
+  },
+  {
+    id: 18,
+    rating: 5,
+    userName: "Auburn Love",
+    date: "03/2023",
+    comment:
+      "Lovely space taken over by a really welcoming group of people.  The mushroom focaccia was delicious and so was the fresh chocolate chip cookie. Thanks for superb food and customer service.",
+    service: "Dine in",
+    mealType: "Lunch",
+    pricePerPerson: "$20-40",
+    options: "Dietary restrictions,Vegetarian options",
+  },
+  {
+    id: 19,
+    rating: 5,
+    userName: "Jo Davis",
+    date: "04/2023",
+    comment:
+      "Seriously tasty!Amazing focaccia and arguably an even better salad. We’ll be back.",
+    service: "Dine in",
+    mealType: "Brunch",
+    pricePerPerson: "$1-20",
+    options: "Vegetarian options, Parking",
+  },
+  {
+    id: 20,
+    rating: 5,
+    userName: "Kiran Cunningham",
+    date: "02/2023",
+    comment:
+      "I love this place. A unique spot with absolutely delicious sandwiches, man I love focaccia. Mushroom paté is my fave one but all the options are great. Everyone who works there is really lovely too, do yaself a favour and go and experience this",
+    mealType: "Brunch",
+    pricePerPerson: "$20-40",
+    options: "Vegetarian options",
+  },
+  {
+    id: 21,
+    rating: 5,
+    userName: "Zana Nuka",
+    date: "12/2022",
+    comment:
+      "Great little place. Owner's are absolutely lovely and super friendly. Just popped in for a coffee (which was delicious by the way). Will try a sandwhich next time! Well done guys! Wishing you so much luck on your new adventure :) see you real soon!",
+    service: "Delivery",
+    mealType: "Other",
+  },
+  {
+    id: 22,
+    rating: 5,
+    userName: "Darren Humphries",
+    date: "11/2022",
+    comment:
+      "Great new little sandwich spot! Had the Roast Pumpkin sandwich which was absolutely delicious. Guys were super lovely & really putting their hearts into their product. Definitely check it out.",
+    service: "Dine in",
+    mealType: "Breakfast",
+    pricePerPerson: "$1-20",
+    options: "Vegetarian options",
+  },
+];
+
+export { reviews };

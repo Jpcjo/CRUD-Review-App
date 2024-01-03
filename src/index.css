@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide the default scrollbar (optional, you can remove this) */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: none;
+  border-radius: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: none;
+}
+
+/* WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: none;
+}
+
+/* Internet Explorer */
+* {
+  scrollbar-width: none;
+  scrollbar-base-color: none;
+}
