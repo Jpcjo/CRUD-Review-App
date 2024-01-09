@@ -79,10 +79,10 @@ const Login = () => {
   }, [dispatch]);
 
   return (
-    <section className="h-screen grid place-items-center">
+    <section className="h-[80%] sm:h-screen  grid place-items-center ">
       <Form
         method="post"
-        className="card w-96 p-8  shadow-md gap-y-4 bg-slate-100"
+        className="card w-[80%] sm:w-96  p-8  shadow-md gap-y-4 bg-slate-100"
       >
         <h4 className="text-center text-3xl font-bold">Login</h4>
         <FormInput

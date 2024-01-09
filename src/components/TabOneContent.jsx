@@ -260,7 +260,7 @@ const TabOneContent = ({ switchToTabThree }) => {
   return (
     <div>
       <button
-        className="flex flex-row justify-between w-full items-center p-4 border-y"
+        className="flex flex-row justify-between w-full items-center p-4 border-y text-sm sm:text-base"
         onClick={switchToTabThree}
       >
         <div className="flex flex-row w-full space-x-6 items-center">
@@ -280,16 +280,16 @@ const TabOneContent = ({ switchToTabThree }) => {
         <RiArrowRightSLine />
       </button>
 
-      <section className="mt-6 space-y-3 text-sm md:text-base">
+      <section className="mt-6 space-y-3 text-xs sm:text-base">
         <button
-          className={`flex flex-row items-center justify-between w-full p-3 rounded-xl ${
+          className={`flex flex-row items-center justify-between w-[82vw] sm:w-full py-3 sm:p-3 rounded-xl ${
             copyIconShow === false ? "bg-white" : "bg-gray-100"
           }`}
           onMouseEnter={() => setCopyIconShow(true)}
           onMouseLeave={() => setCopyIconShow(false)}
           onClick={handleCopyToClipboard}
         >
-          <div className="flex flex-row items-center space-x-5 ">
+          <div className="flex flex-row items-center space-x-1 sm:space-x-5 ">
             <PiMapPinBold className="w-6 h-6 text-blue-500" />
             <div>{addressText}</div>
           </div>
@@ -300,12 +300,14 @@ const TabOneContent = ({ switchToTabThree }) => {
         </button>
 
         {/* Opening status section */}
-        <div className={`flex flex-row items-start w-full px-3 space-x-2`}>
+        <div
+          className={`flex flex-row items-start w-full py-3 sm:p-3 space-x-2`}
+        >
           <div className="flex flex-row items-center ">
             <PiClockBold className="w-10 h-10 text-blue-500" />
             {/* <div>Hour:</div> */}
             <div
-              className={` whitespace-nowrap pl-5 ${
+              className={` whitespace-nowrap pl-1 sm:pl-5 ${
                 cafeStatus === "Closed"
                   ? "text-red-500"
                   : cafeStatus === "Opening Soon" ||
@@ -363,14 +365,14 @@ const TabOneContent = ({ switchToTabThree }) => {
         )}
 
         <button
-          className={`flex flex-row items-center justify-between w-full p-3 rounded-xl ${
+          className={`flex flex-row items-center justify-between w-[82vw] sm:w-full  py-3 sm:p-3 rounded-xl ${
             copyWebsiteShow === false ? "bg-white" : "bg-gray-100"
           }`}
           onMouseEnter={() => setCopyWebsiteShow(true)}
           onMouseLeave={() => setCopyWebsiteShow(false)}
           onClick={handleCopyToClipboardWeb}
         >
-          <div className="flex flex-row items-center space-x-5">
+          <div className="flex flex-row items-center space-x-1 sm:space-x-5">
             <LiaGlobeAmericasSolid className="w-6 h-6 text-blue-500" />
             <a
               href={instaText}
@@ -388,14 +390,14 @@ const TabOneContent = ({ switchToTabThree }) => {
         </button>
 
         <button
-          className={`flex flex-row items-center justify-between w-full p-3 rounded-xl ${
+          className={`flex flex-row items-center justify-between w-[82vw] sm:w-full  py-3 sm:p-3 rounded-xl ${
             copyPhoneShow === false ? "bg-white" : "bg-gray-100"
           }`}
           onMouseEnter={() => setCopyPhoneShow(true)}
           onMouseLeave={() => setCopyPhoneShow(false)}
           onClick={handleCopyToClipboardPhone}
         >
-          <div className="flex flex-row items-center space-x-5">
+          <div className="flex flex-row items-center space-x-1 sm:space-x-5">
             <BsFillTelephoneFill className="w-5 h-5 text-blue-500" />
             <div>{phoneNumText}</div>
           </div>

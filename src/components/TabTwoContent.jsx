@@ -111,11 +111,11 @@ const TabTwoContent = () => {
   }, [isBodyOverflowHidden]);
 
   return (
-    <div className="flex flex-col space-y-4 ">
+    <div className="flex flex-col  space-y-4 ">
       {/* First section */}
-      <div className="flex flex-row space-x-4 items-center p-4 border-y">
+      <div className="flex flex-row space-x-4 items-center py-4 sm:p-4 border-y">
         {/* Rating Left */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center ">
           <p className="text-xl">5.0</p>
           <div className="rating rating-xs rating-half">
             <input type="radio" name="rating-11" className="rating-hidden" />
@@ -214,7 +214,7 @@ const TabTwoContent = () => {
         </section>
       </div>
       {/* Second Section */}
-      <div className="flex flex-col space-y-3 relative">
+      <div className="flex flex-col space-y-3 relative w-[80%] sm:w-full">
         <p className="font-medium">Rate and review</p>
         <p className=" text-gray-400 text-sm">
           Share your experience below to help others. Select stars to begin.
