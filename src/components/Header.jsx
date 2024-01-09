@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -11,21 +12,6 @@ const Header = () => {
   // navigate to a certain page
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.userState);
-
-  // const getInitials = (username) => {
-  //   if (!username) {
-  //     return "";
-  //   }
-
-  //   // Split the username into words
-  //   const words = username.split(" ");
-
-  //   // Extract the first letter of each word
-  //   const initials = words.map((word) => word.charAt(0));
-
-  //   // Join the initials and convert to uppercase
-  //   return initials.join("").toUpperCase();
-  // };
 
   const handleLogout = () => {
     navigate("/");

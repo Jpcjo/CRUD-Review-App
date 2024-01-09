@@ -32,7 +32,7 @@ const ButtonSelectMultiple = ({
   }, [selectedOption, handleTopicsSelect]);
 
   return (
-    <div className="flex flex-wrap  mt-1 mb-16">
+    <div className="flex flex-wrap  mt-1 mb-4">
       {deliveryMethod.map((method, index) => {
         return (
           <button

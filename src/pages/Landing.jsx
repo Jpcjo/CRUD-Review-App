@@ -33,7 +33,7 @@ const Landing = () => {
         </div>
         <div className="flex flex-row items-center space-x-2">
           <div className="text-lg">5.0 </div>
-          <p className="text-xs text-gray-400">(67)</p>
+          <p className="text-xs text-gray-400">(77)</p>
           <div className="rating rating-sm rating-half">
             <input type="radio" name="rating-10" className="rating-hidden" />
             <input

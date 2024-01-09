@@ -13,6 +13,7 @@ const Result = () => {
   const [showOptions, setShowOptions] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isBodyOverflowHidden, setIsBodyOverflowHidden] = useState(false);
+  const [deleteConfirmed, setDeleteConfirmed] = useState(false);
 
   const buttonRef = useRef(null);
 
@@ -57,6 +58,7 @@ const Result = () => {
     setShowOptions(false);
     setIsBodyOverflowHidden(false);
     dispatch(deleteReview());
+    setDeleteConfirmed(true);
   };
 
   const handleCancelDelete = () => {
@@ -82,18 +84,19 @@ const Result = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Update body overflow style based on state
-    document.body.style.overflow = isBodyOverflowHidden ? "hidden" : "auto";
+  // useEffect(() => {
+  //   console.log("Setting overflow:", isBodyOverflowHidden);
+  //   document.body.style.overflow = isBodyOverflowHidden ? "hidden" : "auto";
 
-    // Clean up style on component unmount
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isBodyOverflowHidden]);
+  //   // Clean up style on component unmount
+  //   return () => {
+  //     console.log("Restoring overflow to auto");
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [isBodyOverflowHidden]);
 
   return (
-    <div className="max-w-[85%] mx-auto flex flex-col space-y-4 h-[100vh] overflow-y-auto">
+    <div className="max-w-[85%] mx-auto flex flex-col space-y-4 min-h-[100vh] overflow-y-auto mb-12">
       <div className="grid place-items-center mt-8 mb-4">
         {/* avatar */}
         <div className="avatar online">
@@ -147,12 +150,14 @@ const Result = () => {
                 >
                   Edit Review
                 </Link>
-                <div
-                  onClick={handleDeleteReview}
-                  className="cursor-pointer hover:underline my-2"
-                >
-                  Delete Review
-                </div>
+                {showOptions && !deleteConfirmed && (
+                  <div
+                    onClick={handleDeleteReview}
+                    className="cursor-pointer hover:underline my-2"
+                  >
+                    Delete Review
+                  </div>
+                )}
               </div>
             )}
           </button>
@@ -161,10 +166,10 @@ const Result = () => {
         {/* Delete Review Modal */}
         {showDeleteModal && (
           <div
-            className="fixed  min-h-[120vh] inset-0 flex overflow-y-auto items-center justify-center bg-black bg-opacity-50 z-[2000]"
+            className="fixed  min-h-[120vh] inset-0 flex overflow-y-auto items-center justify-center bg-black bg-opacity-0 z-[2000]"
             content="Delete this review?"
           >
-            <div className="bg-white p-4 rounded-xl">
+            <div className="bg-gray-500 text-white opacity-90 p-4 rounded-xl">
               <h1 className="text-xl font-semibold mb-4">
                 Delete this review?
               </h1>
@@ -177,7 +182,7 @@ const Result = () => {
                   Cancel
                 </button>
                 <button
-                  className="font-semibold text-blue-500"
+                  className="font-semibold text-blue-300"
                   onClick={handleConfirmDelete}
                 >
                   Delete
@@ -243,6 +248,12 @@ const Result = () => {
             </div>
             <div>{selectedTopicsSlice && selectedTopicsSlice.join(", ")}</div>
           </div>
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <Link to={"/"} className="btn btn-primary">
+            Home
+          </Link>
         </div>
       </div>
     </div>

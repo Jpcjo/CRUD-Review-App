@@ -61,7 +61,7 @@ const Tabs = () => {
             <div className=" py-4 min-w-full">
               {activeTab === 2 && <TabTwoContent />}
             </div>
-            <div className="bg-slate-100 p-4 min-w-full">
+            <div className="  p-4 min-w-full">
               {activeTab === 3 && <TabThreeContent />}
             </div>
             {/* {tabs.map((tab, index) => (

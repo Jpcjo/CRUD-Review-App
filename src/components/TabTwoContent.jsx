@@ -217,7 +217,7 @@ const TabTwoContent = () => {
       <div className="flex flex-col space-y-3 relative">
         <p className="font-medium">Rate and review</p>
         <p className=" text-gray-400 text-sm">
-          Share your experience below to help others
+          Share your experience below to help others. Select stars to begin.
         </p>
 
         <div className="flex flex-row place-items-center space-x-4">
@@ -309,7 +309,7 @@ const TabTwoContent = () => {
           className="fixed h-full w-full   bg-black bg-opacity-0 z-[2000]"
           content="Delete this review?"
         >
-          <div className="bg-black text-white p-4 shadow-xl bg-opacity-100 rounded-xl w-[50%] fixed top-[200px] left-[60vw]">
+          <div className="bg-gray-500 text-white opacity-90 p-4 shadow-xl  rounded-xl w-[50%] fixed top-[200px] left-[60vw]">
             <h1 className="text-xl font-semibold mb-4">Delete this review?</h1>
             <p>Deleted reviews cannot be recovered.</p>
             <div className="flex justify-end mt-4">
@@ -320,7 +320,7 @@ const TabTwoContent = () => {
                 Cancel
               </button>
               <button
-                className="font-semibold text-blue-500"
+                className="font-semibold text-blue-300"
                 onClick={handleConfirmDelete}
               >
                 Delete

@@ -107,7 +107,7 @@ const Review = () => {
   // };
 
   return (
-    <div className="max-w-[90%] mx-auto flex flex-col space-y-4 h-[160vh] overflow-y-scroll">
+    <div className="max-w-[90%] mx-auto flex flex-col space-y-4 h-[150vh] overflow-y-scroll">
       <p className="my-4 text-3xl grid place-items-center font-semibold text-gray-500">
         The Twin
       </p>
@@ -231,7 +231,7 @@ const Review = () => {
           storeKey={selectedTopicsSlice}
         />
       </div>
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-2 mb-2">
         <Link
           to={`${user === null ? "/login" : "/result"}`}
           className="btn btn-primary"
