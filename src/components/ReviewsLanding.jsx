@@ -216,7 +216,7 @@ const ReviewsLanding = () => {
         </button>
 
         {showSortOptions && (
-          <div className="absolute bg-white flex flex-col shadow-md border rounded-lg w-fit px-2">
+          <div className="absolute right-3 bg-white flex flex-col shadow-md border rounded-lg w-fit px-2">
             <button
               onClick={() => handleSort("relevant")}
               className=" text-gray-700 px-2 py-2 rounded-md "

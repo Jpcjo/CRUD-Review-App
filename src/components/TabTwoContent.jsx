@@ -233,7 +233,7 @@ const TabTwoContent = () => {
           <div className="text-sm">{user && user.username}</div>
         </div>
 
-        <div className="flex flex-row justify-between pt-3">
+        <div className="flex flex-row justify-between pt-3 pr-2">
           <Link to={`${user === null ? "/login" : "/review"}`}>
             <div className="rating rating-md" onMouseLeave={handleStarLeave}>
               {[1, 2, 3, 4, 5].map((starIndex) => (
@@ -266,7 +266,7 @@ const TabTwoContent = () => {
 
             {isDotsIconHovered && (
               <div
-                className={`absolute right-2  bg-gray-800 text-white w-fit text-sm px-2 py-1 transition-opacity hover:duration-300 ${
+                className={`absolute right-5  bg-gray-800 text-white w-fit text-sm px-2 py-1 transition-opacity hover:duration-300 ${
                   isDotsIconHovered && !showOptions
                     ? "opacity-100"
                     : "opacity-0"
@@ -277,7 +277,7 @@ const TabTwoContent = () => {
             )}
             {showOptions && (
               <div
-                className={`absolute right-2   ${
+                className={`absolute right-5   ${
                   deleteConfirmed === true ? "top-[70px]" : "top-12"
                 } flex flex-col bg-white text-gray-800 shadow-md text-sm p-2 rounded`}
               >
@@ -306,13 +306,17 @@ const TabTwoContent = () => {
       {/* Delete Review Modal */}
       {showDeleteModal && (
         <div
-          className="fixed h-full w-full   bg-black bg-opacity-0 z-[2000]"
+          className="fixed h-full w-full grid place-items-center bg-black bg-opacity-0 z-[2000]"
           content="Delete this review?"
         >
-          <div className="bg-gray-500 text-white opacity-90 p-4 shadow-xl  rounded-xl w-[50%] fixed top-[200px] left-[60vw]">
-            <h1 className="text-xl font-semibold mb-4">Delete this review?</h1>
-            <p>Deleted reviews cannot be recovered.</p>
-            <div className="flex justify-end mt-4">
+          <div className="bg-gray-500 text-white opacity-90 p-4 shadow-xl  rounded-xl w-[50%] fixed top-[200px]  ">
+            <h1 className="text-base lg:text-xl font-semibold mb-4">
+              Delete this review?
+            </h1>
+            <p className="text-sm lg:text-base">
+              Deleted reviews cannot be recovered.
+            </p>
+            <div className="  flex justify-end mt-4">
               <button
                 className="mr-4 font-semibold "
                 onClick={handleCancelDelete}
