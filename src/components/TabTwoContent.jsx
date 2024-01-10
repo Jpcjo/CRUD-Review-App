@@ -111,7 +111,7 @@ const TabTwoContent = () => {
   }, [isBodyOverflowHidden]);
 
   return (
-    <div className="flex flex-col  space-y-4 ">
+    <div className="flex flex-col place-items-center sm:place-items-start space-y-4 ">
       {/* First section */}
       <div className="flex flex-row space-x-4 items-center py-4 sm:p-4 border-y">
         {/* Rating Left */}
@@ -185,7 +185,7 @@ const TabTwoContent = () => {
         </div>
 
         {/* Chart */}
-        <section className="flex flex-col space-y-1.5">
+        <section className="flex flex-col space-y-1.5  ">
           <progress
             className="progress progress-warning w-56 h-[6px]"
             value="100"
@@ -214,7 +214,7 @@ const TabTwoContent = () => {
         </section>
       </div>
       {/* Second Section */}
-      <div className="flex flex-col space-y-3 relative w-[80%] sm:w-full">
+      <div className="flex flex-col space-y-3 relative w-[76%] sm:w-full">
         <p className="font-medium">Rate and review</p>
         <p className=" text-gray-400 text-sm">
           Share your experience below to help others. Select stars to begin.
@@ -337,7 +337,7 @@ const TabTwoContent = () => {
         ""
       ) : (
         <div
-          className={`flex flex-col item-starts w-full space-y-6 ${
+          className={`flex flex-col items-start w-[70%] sm:w-full space-y-6 ${
             deleteConfirmed === true ? "h-0" : "h-auto"
           } `}
         >

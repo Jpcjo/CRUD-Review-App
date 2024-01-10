@@ -203,7 +203,7 @@ const ReviewsLanding = () => {
   // Rest of your component...
 
   return (
-    <div className="w-[83%] sm:w-full">
+    <div className="w-[75%] sm:w-full">
       <div className="flex flex-col items-end relative ">
         <button
           ref={dropdownRef}

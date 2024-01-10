@@ -15,7 +15,7 @@ const TabOneContent = ({ switchToTabThree }) => {
   const [copiedMessage, setCopiedMessage] = useState(false);
   const [copiedMessage2, setCopiedMessage2] = useState(false);
   const [copiedMessage3, setCopiedMessage3] = useState(false);
-  const addressText = "27 Vulture St, West End QLD 4101, Australia";
+  const addressText = "27 Vulture St, West End QLD 4101";
   const instaText = "https://www.instagram.com/thetwin_westend/";
   const phoneNumText = "+61 7 3844 9371";
   const [currentTime, setCurrentTime] = useState("");
@@ -260,7 +260,7 @@ const TabOneContent = ({ switchToTabThree }) => {
   return (
     <div>
       <button
-        className="flex flex-row justify-between w-full items-center p-4 border-y text-sm sm:text-base"
+        className="flex flex-row justify-between w-[70%] sm:w-full items-center p-4 border-y text-xs sm:text-base"
         onClick={switchToTabThree}
       >
         <div className="flex flex-row w-full space-x-6 items-center">
