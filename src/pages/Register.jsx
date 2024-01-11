@@ -29,7 +29,7 @@ export const action = async ({ request }) => {
 
 const Register = () => {
   return (
-    <section className="h-[85%] sm:h-screen grid place-items-center">
+    <section className=" h-screen grid place-items-center">
       <Form
         method="POST"
         className="card w-[80%] sm:w-96 p-8 shadow-md gap-y-4  bg-white"
