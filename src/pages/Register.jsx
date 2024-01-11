@@ -32,7 +32,7 @@ const Register = () => {
     <section className="h-[85%] sm:h-screen grid place-items-center">
       <Form
         method="POST"
-        className="card w-[80%] sm:w-96 p-8 shadow-lg gap-y-4  bg-slate-100"
+        className="card w-[80%] sm:w-96 p-8 shadow-md gap-y-4  bg-white"
       >
         <h4 className="text-center text-3xl font-bold">Register</h4>
         <FormInput type="text" label="username" name="username" />
