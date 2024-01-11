@@ -107,7 +107,7 @@ const Review = () => {
   // };
 
   return (
-    <div className="max-w-[90%] mx-auto flex flex-col space-y-4 h-[150vh] overflow-y-scroll">
+    <div className="max-w-[90%] mx-auto flex flex-col space-y-0 xs:space-y-4 h-[150vh] overflow-y-scroll">
       <p className="my-4 text-3xl grid place-items-center font-semibold text-gray-500">
         The Twin
       </p>
@@ -149,7 +149,7 @@ const Review = () => {
           <button onClick={handleCloseModal}>
             <IoIosCloseCircleOutline className="w-[25px] h-[25px] hover:scale-105 duration-300 hover:text-gray-500" />
           </button>
-          <p>
+          <p className="text-sm xs:text-base">
             Your posts will appear publicly with your profile name and picture.
             Your posts will appear on our services across the web, like Maps and
             Search, and on third-party sites ​​and apps that use our services.
