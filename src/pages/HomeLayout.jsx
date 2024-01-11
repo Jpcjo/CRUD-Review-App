@@ -39,7 +39,7 @@ const HomeLayout = () => {
       <section
         key={rerenderKey}
         className={`z-10 h-screen ${
-          sidebarCollapsed ? "w-0" : "w-[6000px] md:w-[1280px]"
+          sidebarCollapsed ? "w-0" : "w-[5500px] md:w-[1280px]"
         } shadow-xl overflow-y-scroll border-r border-grey-700 transition-all transform duration-300 ease-in-out ${
           sidebarCollapsed ? "-translate-x-full" : "translate-x-0"
         }`}

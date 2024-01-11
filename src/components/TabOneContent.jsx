@@ -260,21 +260,21 @@ const TabOneContent = ({ switchToTabThree }) => {
   return (
     <div>
       <button
-        className="flex flex-row justify-between w-[70%] sm:w-full items-center p-4 border-y text-xs sm:text-base"
+        className="flex flex-row justify-start space-x-4 sm:justify-between  w-full items-center p-4 border-y "
         onClick={switchToTabThree}
       >
-        <div className="flex flex-row w-full space-x-6 items-center">
+        <div className="flex flex-row space-x-6 items-center">
           <div className="flex flex-row items-center space-x-2">
             <li>Dine-in</li>
-            <IoCheckmark className="w-5 h-5 text-green-700" />
+            <IoCheckmark className="w-5 h-5 text-green-700 " />
           </div>
           <div className="flex flex-row items-center space-x-2">
             <li>Takeaway</li>
-            <IoCheckmark className="w-5 h-5 text-green-700" />
+            <IoCheckmark className="w-5 h-5 text-green-700 " />
           </div>
-          <div className="flex flex-row items-center space-x-2">
+          <div className=" items-center space-x-2 hidden sm:flex">
             <li>Delivery</li>
-            <RxCross1 className="w-4 h-4 text-red-700" />
+            <RxCross1 className="w-4 h-4 text-red-700  " />
           </div>
         </div>
         <RiArrowRightSLine />
@@ -289,7 +289,7 @@ const TabOneContent = ({ switchToTabThree }) => {
           onMouseLeave={() => setCopyIconShow(false)}
           onClick={handleCopyToClipboard}
         >
-          <div className="flex flex-row items-center space-x-1 sm:space-x-5 ">
+          <div className="flex flex-row items-center space-x-3 sm:space-x-5 ">
             <PiMapPinBold className="w-6 h-6 text-blue-500" />
             <div>{addressText}</div>
           </div>
@@ -307,7 +307,7 @@ const TabOneContent = ({ switchToTabThree }) => {
             <PiClockBold className="w-10 h-10 text-blue-500" />
             {/* <div>Hour:</div> */}
             <div
-              className={` whitespace-nowrap pl-1 sm:pl-5 ${
+              className={` whitespace-nowrap pl-3 sm:pl-5 ${
                 cafeStatus === "Closed"
                   ? "text-red-500"
                   : cafeStatus === "Opening Soon" ||
@@ -372,7 +372,7 @@ const TabOneContent = ({ switchToTabThree }) => {
           onMouseLeave={() => setCopyWebsiteShow(false)}
           onClick={handleCopyToClipboardWeb}
         >
-          <div className="flex flex-row items-center space-x-1 sm:space-x-5">
+          <div className="flex flex-row items-center space-x-3 sm:space-x-5">
             <LiaGlobeAmericasSolid className="w-6 h-6 text-blue-500" />
             <a
               href={instaText}
@@ -397,7 +397,7 @@ const TabOneContent = ({ switchToTabThree }) => {
           onMouseLeave={() => setCopyPhoneShow(false)}
           onClick={handleCopyToClipboardPhone}
         >
-          <div className="flex flex-row items-center space-x-1 sm:space-x-5">
+          <div className="flex flex-row items-center space-x-3 sm:space-x-5">
             <BsFillTelephoneFill className="w-5 h-5 text-blue-500" />
             <div>{phoneNumText}</div>
           </div>

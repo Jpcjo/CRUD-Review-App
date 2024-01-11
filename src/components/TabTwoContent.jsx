@@ -111,9 +111,9 @@ const TabTwoContent = () => {
   }, [isBodyOverflowHidden]);
 
   return (
-    <div className="flex flex-col place-items-center sm:place-items-start space-y-4 ">
+    <div className="flex flex-col place-items-start pl-2 xs:pl-0 space-y-4 w-[89%] xxxs:w-[86%] xxs:w-[95%] xs:w-full ">
       {/* First section */}
-      <div className="flex flex-row space-x-4 items-center py-4 sm:p-4 border-y">
+      <div className="flex flex-row space-x-4 items-center py-4 w-full sm:p-4 border-y">
         {/* Rating Left */}
         <div className="flex flex-col items-center ">
           <p className="text-xl">5.0</p>
@@ -181,42 +181,43 @@ const TabTwoContent = () => {
               readOnly
             />
           </div>
-          <p className="text-xs text-gray-400">(67)</p>
+          <p className="text-xs text-gray-400">(77)</p>
         </div>
 
         {/* Chart */}
-        <section className="flex flex-col space-y-1.5  ">
+        <section className="flex flex-col space-y-1.5 ">
           <progress
-            className="progress progress-warning w-56 h-[6px]"
+            className="progress progress-warning w-[97%] xxxs:w-56 h-[6px]"
             value="100"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning w-56 h-[6px]"
+            className="progress progress-warning w-[97%] xxxs:w-56 h-[6px]"
             value="90"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning w-56 h-[6px]"
+            className="progress progress-warning w-[97%] xxxs:w-56 h-[6px]"
             value="20"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning w-56 h-[6px]"
+            className="progress progress-warning w-[97%] xxxs:w-56 h-[6px]"
             value="5"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning w-56 h-[6px]"
+            className="progress progress-warning w-[97%] xxxs:w-56 h-[6px]"
             value="2"
             max="100"
           ></progress>
         </section>
       </div>
+
       {/* Second Section */}
-      <div className="flex flex-col space-y-3 relative w-[76%] sm:w-full">
+      <div className="flex flex-col space-y-3 relative w-full">
         <p className="font-medium">Rate and review</p>
-        <p className=" text-gray-400 text-sm">
+        <p className=" text-gray-400 text-sm  ">
           Share your experience below to help others. Select stars to begin.
         </p>
 
@@ -233,7 +234,7 @@ const TabTwoContent = () => {
           <div className="text-sm">{user && user.username}</div>
         </div>
 
-        <div className="flex flex-row justify-between pt-3 pr-2">
+        <div className="flex flex-row justify-between  w-full pt-3 pr-2">
           <Link to={`${user === null ? "/login" : "/review"}`}>
             <div className="rating rating-md" onMouseLeave={handleStarLeave}>
               {[1, 2, 3, 4, 5].map((starIndex) => (
@@ -278,7 +279,9 @@ const TabTwoContent = () => {
             {showOptions && (
               <div
                 className={`absolute right-5   ${
-                  deleteConfirmed === true ? "top-[70px]" : "top-12"
+                  deleteConfirmed === true
+                    ? "top-[100px] xs:top-[70px]"
+                    : "top-[60px] xs:top-12"
                 } flex flex-col bg-white text-gray-800 shadow-md text-sm p-2 rounded`}
               >
                 <Link
@@ -306,17 +309,17 @@ const TabTwoContent = () => {
       {/* Delete Review Modal */}
       {showDeleteModal && (
         <div
-          className="fixed h-full w-full grid place-items-center bg-black bg-opacity-0 z-[2000]"
+          className="fixed  h-full w-[89%] xxxs:w-[86%] xxs:w-[95%] xs:w-full grid place-items-center bg-black bg-opacity-0 z-[2000]"
           content="Delete this review?"
         >
           <div className="bg-gray-500 text-white opacity-90 p-4 shadow-xl  rounded-xl w-[50%] fixed top-[200px]  ">
-            <h1 className="text-base lg:text-xl font-semibold mb-4">
+            <h1 className="text-[13px] xs:text-base lg:text-xl font-semibold mb-4">
               Delete this review?
             </h1>
-            <p className="text-sm lg:text-base">
+            <p className="text-[12px] xs:text-sm lg:text-base">
               Deleted reviews cannot be recovered.
             </p>
-            <div className="  flex justify-end mt-4">
+            <div className="flex justify-end mt-4 text-[13px] xxs:text-sm lg:text-base">
               <button
                 className="mr-4 font-semibold "
                 onClick={handleCancelDelete}
@@ -324,7 +327,7 @@ const TabTwoContent = () => {
                 Cancel
               </button>
               <button
-                className="font-semibold text-blue-300"
+                className="font-semibold text-blue-300 "
                 onClick={handleConfirmDelete}
               >
                 Delete
@@ -337,7 +340,7 @@ const TabTwoContent = () => {
         ""
       ) : (
         <div
-          className={`flex flex-col items-start w-[70%] sm:w-full space-y-6 ${
+          className={`flex flex-col items-start  space-y-6 ${
             deleteConfirmed === true ? "h-0" : "h-auto"
           } `}
         >
