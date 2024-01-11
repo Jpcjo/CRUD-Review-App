@@ -82,7 +82,7 @@ const Login = () => {
     <section className=" h-screen  grid place-items-center ">
       <Form
         method="post"
-        className="card w-[80%] sm:w-96  p-8  gap-y-4 shadow-lg  bg-white"
+        className="card w-[80%] sm:w-96  p-8  gap-y-4 shadow-lg  bg-slate-100"
       >
         <h4 className="text-center text-3xl font-bold">Login</h4>
         <FormInput
@@ -99,7 +99,7 @@ const Login = () => {
         <p className="text-center">--- or ---</p>
         <button
           type="button"
-          className="btn btn-secondary btn-block hover:scale-105 text-pink-500 duration-300  bg-slate-200 hover:bg-slate-100 border-none"
+          className="btn btn-secondary btn-block hover:scale-105 text-pink-400 duration-300  bg-white hover:bg-white border-none"
           onClick={loginAsGuestUser}
         >
           guest user
