@@ -309,7 +309,7 @@ const TabTwoContent = () => {
       {/* Delete Review Modal */}
       {showDeleteModal && (
         <div
-          className="fixed  h-full w-[89%] xxxs:w-[86%] xxs:w-[95%] xs:w-full grid place-items-center bg-black bg-opacity-0 z-[2000]"
+          className="fixed  h-full  w-full grid place-items-center bg-black bg-opacity-0 z-[2000]"
           content="Delete this review?"
         >
           <div className="bg-gray-500 text-white opacity-90 p-4 shadow-xl  rounded-xl w-[50%] fixed top-[200px]  ">
