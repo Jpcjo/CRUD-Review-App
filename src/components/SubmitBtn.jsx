@@ -8,7 +8,7 @@ const SubmitBtn = ({ text }) => {
   return (
     <button
       type="submit"
-      className="btn btn-accent btn-block hover:scale-105 duration-300 text-white bg-slate-400 hover:bg-slate-500 border-none"
+      className="btn btn-accent btn-block hover:scale-105 duration-300 text-white bg-slate-300 hover:bg-slate-400 border-none"
       disabled={isSubmitting}
     >
       {isSubmitting ? (
