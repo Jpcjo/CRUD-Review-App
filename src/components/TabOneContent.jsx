@@ -280,7 +280,7 @@ const TabOneContent = ({ switchToTabThree }) => {
         <RiArrowRightSLine />
       </button>
 
-      <section className="mt-6 space-y-3 text-xs sm:text-base">
+      <section className="mt-6 space-y-3 text-sm sm:text-base">
         <button
           className={`flex flex-row items-center justify-between w-[82vw] sm:w-full py-3 sm:p-3 rounded-xl ${
             copyIconShow === false ? "bg-white" : "bg-gray-100"
