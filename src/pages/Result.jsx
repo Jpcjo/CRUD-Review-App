@@ -96,7 +96,7 @@ const Result = () => {
   // }, [isBodyOverflowHidden]);
 
   return (
-    <div className="max-w-[85%] mx-auto flex flex-col space-y-4 min-h-[100vh] overflow-y-auto mb-6">
+    <div className="max-w-[85%] mx-auto flex flex-col space-y-4 min-h-[100vh] overflow-y-auto mb-24">
       <div className="grid place-items-center mt-8 mb-4">
         {/* avatar */}
         <div className="avatar online">

@@ -231,7 +231,7 @@ const Review = () => {
           storeKey={selectedTopicsSlice}
         />
       </div>
-      <div className="flex justify-center mt-2 pb-8">
+      <div className="flex justify-center mt-2 pb-24">
         <Link
           to={`${user === null ? "/login" : "/result"}`}
           className="btn btn-primary"
