@@ -19,6 +19,8 @@ const TabTwoContent = () => {
   const [isBodyOverflowHidden, setIsBodyOverflowHidden] = useState(false);
   const [deleteConfirmed, setDeleteConfirmed] = useState(false);
 
+  console.log(deleteConfirmed);
+
   const buttonRef = useRef(null);
 
   const { activeTab, hoveredStar, user, userId } = useSelector(
@@ -187,27 +189,27 @@ const TabTwoContent = () => {
         {/* Chart */}
         <section className="flex flex-col space-y-1.5 ">
           <progress
-            className="progress progress-warning  w-56 h-[6px]"
+            className="progress progress-warning w-[98%] xxxs:w-56 h-[6px]"
             value="100"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning  w-56 h-[6px]"
+            className="progress progress-warning w-[98%] xxxs:w-56 h-[6px]"
             value="90"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning  w-56 h-[6px]"
+            className="progress progress-warning w-[98%] xxxs:w-56 h-[6px]"
             value="20"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning  w-56 h-[6px]"
+            className="progress progress-warning w-[98%] xxxs:w-56 h-[6px]"
             value="5"
             max="100"
           ></progress>
           <progress
-            className="progress progress-warning  w-56 h-[6px]"
+            className="progress progress-warning w-[98%] xxxs:w-56 h-[6px]"
             value="2"
             max="100"
           ></progress>
