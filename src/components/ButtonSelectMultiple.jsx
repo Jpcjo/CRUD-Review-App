@@ -7,7 +7,6 @@ const ButtonSelectMultiple = ({
   storeKey,
 }) => {
   const [selectedOption, setSelectedOption] = useState(storeKey || []);
-  //   console.log(selectedOption);
 
   const handleButtonClick = (option) => {
     setSelectedOption((prevSelectedOptions) => {

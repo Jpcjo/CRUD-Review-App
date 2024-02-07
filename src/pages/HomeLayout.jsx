@@ -13,17 +13,6 @@ const HomeLayout = () => {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setSidebarCollapsed(true);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setRerenderKey((prevKey) =>

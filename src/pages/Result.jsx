@@ -3,7 +3,7 @@ import { getInitials } from "../utilis/utilities";
 import { useDispatch, useSelector } from "react-redux";
 import { twins } from "../utilis/imagesData";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { deleteReview } from "../features/user/userSlice";
 
 const Result = () => {
@@ -18,10 +18,9 @@ const Result = () => {
   const buttonRef = useRef(null);
 
   const { user } = useSelector((state) => state.userState);
-  const { hoveredStar, reviewData } = useSelector((state) => state.userState);
+  const { hoveredStar } = useSelector((state) => state.userState);
   const {
     reviewData: {
-      starRatingSlice,
       reviewTextSlice,
       deliveryMethodSlice,
       mealSlice,
@@ -83,17 +82,6 @@ const Result = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
-
-  // useEffect(() => {
-  //   console.log("Setting overflow:", isBodyOverflowHidden);
-  //   document.body.style.overflow = isBodyOverflowHidden ? "hidden" : "auto";
-
-  //   // Clean up style on component unmount
-  //   return () => {
-  //     console.log("Restoring overflow to auto");
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [isBodyOverflowHidden]);
 
   return (
     <div className="max-w-[85%] mx-auto flex flex-col space-y-4 min-h-[100vh] overflow-y-auto mb-24">

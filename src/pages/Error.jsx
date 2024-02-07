@@ -2,7 +2,6 @@ import { useRouteError, Link } from "react-router-dom";
 
 const Error = () => {
   const error = useRouteError();
-  //   console.log(error);
 
   if (error.status === 404)
     return (
@@ -26,7 +25,6 @@ const Error = () => {
 
   return (
     <main className="grid min-h-[100vh] place-items-center px-8 ">
-      {/* [100vh] is daisy UI */}
       <h4 className="text-center font-bold text-4xl">
         Oops! There was an error...{" "}
       </h4>

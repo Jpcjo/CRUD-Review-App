@@ -13,7 +13,6 @@ export const action = async ({ request }) => {
 
   try {
     const response = await customFetch.post("/auth/local/register", data);
-    // console.log(response);
     toast.success("account created successfully");
     return redirect("/login");
   } catch (error) {

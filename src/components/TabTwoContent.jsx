@@ -17,9 +17,10 @@ const TabTwoContent = () => {
   const [showOptions, setShowOptions] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [isBodyOverflowHidden, setIsBodyOverflowHidden] = useState(false);
-  const [deleteConfirmed, setDeleteConfirmed] = useState(false);
-
-  console.log(deleteConfirmed);
+  const [deleteConfirmed, setDeleteConfirmed] = useState(() => {
+    const storedDeleteConfirmed = sessionStorage.getItem("deleteConfirmed");
+    return storedDeleteConfirmed ? JSON.parse(storedDeleteConfirmed) : false;
+  });
 
   const buttonRef = useRef(null);
 
@@ -38,8 +39,6 @@ const TabTwoContent = () => {
     },
   } = useSelector((state) => state.userState);
 
-  // const [hoveredStar, setHoveredStar] = useState(0);
-
   const handleStarHover = (starIndex) => {
     dispatch(isStarHovered(starIndex));
   };
@@ -47,7 +46,6 @@ const TabTwoContent = () => {
   const handleStarLeave = () => {
     dispatch(isStarHovered(0));
   };
-  // console.log(user);
 
   const handleButtonClick = () => {
     setShowOptions(!showOptions);
@@ -69,8 +67,7 @@ const TabTwoContent = () => {
 
   const handleConfirmDelete = () => {
     // Add logic to handle the actual deletion of the review
-    console.log("Review deleted");
-
+    sessionStorage.setItem("deleteConfirmed", JSON.stringify(true));
     setDeleteConfirmed(true);
     // Close the modal after handling the delete action
     setShowDeleteModal(false);
@@ -111,6 +108,13 @@ const TabTwoContent = () => {
       document.body.style.overflow = "auto";
     };
   }, [isBodyOverflowHidden]);
+
+  useEffect(() => {
+    return () => {
+      // Clear sessionStorage only when the component is unmounted
+      sessionStorage.removeItem("deleteConfirmed");
+    };
+  }, []);
 
   return (
     <div className="flex flex-col place-items-start pl-2 xs:pl-0 space-y-4 w-[89%] xxxs:w-[86%] xxs:w-[95%] xs:w-full ">

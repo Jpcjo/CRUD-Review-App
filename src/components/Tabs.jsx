@@ -12,7 +12,6 @@ const Tabs = () => {
   const dispatch = useDispatch();
   const { currentPage } = useSelector((state) => state.tabState);
   const { activeTab } = useSelector((state) => state.userState);
-  //   const [activeTab, setActiveTab] = useState(1);
 
   const handleTabClick = (tabNumber) => {
     dispatch(activeTabNum(tabNumber));
@@ -64,11 +63,6 @@ const Tabs = () => {
             <div className="  p-4 min-w-full">
               {activeTab === 3 && <TabThreeContent />}
             </div>
-            {/* {tabs.map((tab, index) => (
-              <div key={index} className="bg-blue-100 p-4 min-w-full">
-                {activeTab === index + 1 && <p>{`Content for ${tab}`}</p>}
-              </div>
-            ))} */}
           </div>
         </div>
       </div>

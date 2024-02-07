@@ -16,7 +16,6 @@ const Header = () => {
   const handleLogout = () => {
     navigate("/");
     dispatch(logoutUser());
-    // dispatch(isStarHovered(0));
   };
 
   return (
@@ -41,7 +40,7 @@ const Header = () => {
           >
             LOGIN
           </Link>
-          {/* <p className="text-sm font-extralight">- or -</p> */}
+
           <Link
             to="/register"
             className="link link-hover text-xs sm:text-sm hover:scale-105  hover:text-black duration-300"

@@ -66,15 +66,10 @@ const TabOneContent = ({ switchToTabThree }) => {
 
       const [hours, minutes] = currentTime.split(":").map(Number);
       const convertedTime = (hours + minutes / 60).toFixed(2);
-
-      // console.log(convertedTime);
-
       const openingHour = parseInt(openingHours[currentDay].split("AM")[0]);
 
       const closingHour =
         parseInt(closingHours[currentDay].split("PM")[0]) + 12;
-
-      // console.log("closing hour", closingHour);
 
       if (convertedTime < openingHour - 0.5) {
         // Check if within 30 minutes prior to opening
@@ -425,12 +420,6 @@ const TabOneContent = ({ switchToTabThree }) => {
             Copied to clipboard
           </div>
         )}
-
-        {/* Current time in Brisbane section */}
-        {/* <div className="flex flex-row items-center space-x-5">
-          <PiClockBold className="w-6 h-6 text-blue-500" />
-          <div>{`Current Time in Brisbane: ${currentTime}`}</div>
-        </div> */}
       </section>
     </div>
   );
